@@ -1,0 +1,2437 @@
+/* =========================================================
+   ENGLISH KIDS
+   PREMIUM PLAYFUL UI
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px 12px;
+
+    font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    color: #24324a;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255,255,255,0.9) 0 35px,
+            transparent 36px
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(255,255,255,0.7) 0 50px,
+            transparent 51px
+        ),
+        linear-gradient(
+            180deg,
+            #65d8ff 0%,
+            #9be7ff 38%,
+            #d8f7ff 72%,
+            #fff8e8 100%
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* =========================================================
+   DECORATIVE SKY
+   ========================================================= */
+
+body::before {
+    content: "☁️        ☁️             ☁️        ☁️";
+
+    position: fixed;
+
+    top: 35px;
+    left: -120px;
+
+    width: 140%;
+
+    font-size: 48px;
+    letter-spacing: 18px;
+
+    opacity: 0.75;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        awanBergerak 35s linear infinite;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 260px;
+
+    top: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius:
+        500px 500px 0 0;
+
+    background:
+        radial-gradient(
+            ellipse at center bottom,
+            transparent 0 48%,
+            #ff6b6b 49% 53%,
+            #ffa94d 54% 58%,
+            #ffe066 59% 63%,
+            #69db7c 64% 68%,
+            #4dabf7 69% 73%,
+            #9775fa 74% 78%,
+            transparent 79%
+        );
+
+    opacity: 0.28;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+    animation:
+        pelangiFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   GENERAL CARD
+   ========================================================= */
+
+.card,
+.startCard,
+.menuCard,
+.learnCard {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 28px 24px;
+
+    border-radius: 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.98),
+            rgba(247,252,255,0.94)
+        );
+
+    border: 3px solid rgba(255,255,255,0.95);
+
+    box-shadow:
+        0 25px 60px rgba(39,93,145,0.18),
+        0 8px 20px rgba(39,93,145,0.12),
+        inset 0 1px 0 white;
+
+    overflow: hidden;
+
+    animation:
+        cardMasuk 0.65s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* Decorative circles */
+
+.card::before,
+.startCard::before,
+.menuCard::before,
+.learnCard::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    top: -70px;
+    right: -55px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(99,102,241,0.15),
+            rgba(56,189,248,0.08)
+        );
+
+    pointer-events: none;
+}
+
+
+.card::after,
+.startCard::after,
+.menuCard::after,
+.learnCard::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    bottom: -45px;
+    left: -30px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(251,191,36,0.14),
+            rgba(249,115,22,0.08)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+h1 {
+
+    position: relative;
+
+    text-align: center;
+
+    margin: 8px 0 12px;
+
+    font-size: clamp(30px, 8vw, 43px);
+
+    font-weight: 900;
+
+    color: #4169e1;
+
+    letter-spacing: -1px;
+
+    text-shadow:
+        2px 2px 0 #ffffff,
+        4px 5px 0 rgba(99,102,241,0.08),
+        0 8px 18px rgba(65,105,225,0.15);
+
+    animation:
+        titleFloat 3s ease-in-out infinite;
+}
+
+
+h1::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    margin-left: 8px;
+
+    color: #ffd43b;
+
+    font-size: 18px;
+
+    animation:
+        bintangKedip 1.5s infinite;
+}
+
+
+hr {
+
+    border: none;
+
+    width: 75%;
+
+    height: 5px;
+
+    margin: 10px auto 24px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff6b6b,
+            #ffd43b,
+            #69db7c,
+            #4dabf7,
+            #9775fa
+        );
+
+    box-shadow:
+        0 4px 10px rgba(79,70,229,0.15);
+}
+
+
+/* =========================================================
+   START SCREEN
+   ========================================================= */
+
+#startScreen,
+#learnMenu,
+#learnScreen {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px 10px;
+}
+
+
+.startCard {
+
+    max-width: 440px;
+
+    padding:
+        35px 25px
+        30px;
+}
+
+
+/* =========================================================
+   RAINBOW ICON
+   ========================================================= */
+
+.rainbowIcon {
+
+    display: block;
+
+    font-size: 78px;
+
+    margin-bottom: 8px;
+
+    filter:
+        drop-shadow(
+            0 10px 12px
+            rgba(0,0,0,0.12)
+        );
+
+    animation:
+        rainbowFloat 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   START TEXT
+   ========================================================= */
+
+.startText,
+.menuText {
+
+    color: #718096;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin:
+        5px auto
+        25px;
+
+    max-width: 340px;
+}
+
+
+/* =========================================================
+   GAME INFO
+   ========================================================= */
+
+.gameInfo {
+
+    position: relative;
+
+    padding: 17px;
+
+    margin-bottom: 20px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef6ff,
+            #f7f2ff
+        );
+
+    border: 2px solid #e0e7ff;
+
+    box-shadow:
+        inset 0 2px 5px
+        rgba(255,255,255,0.8),
+        0 8px 20px
+        rgba(79,70,229,0.08);
+}
+
+
+.gameInfo p {
+
+    margin: 9px 0;
+
+    font-size: 16px;
+
+    color: #475569;
+}
+
+
+/* =========================================================
+   BUTTON GLOBAL
+   ========================================================= */
+
+button {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 54px;
+
+    border: none;
+
+    padding: 15px 18px;
+
+    margin-top: 10px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #4f46e5
+        );
+
+    box-shadow:
+        0 7px 0 #3730a3,
+        0 13px 22px
+        rgba(79,70,229,0.22);
+
+    transition:
+        transform 0.16s ease,
+        box-shadow 0.16s ease,
+        filter 0.2s ease;
+}
+
+
+/* shine */
+
+button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.28),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.5s ease;
+
+    pointer-events: none;
+}
+
+
+button:hover::before {
+
+    left: 140%;
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    filter: brightness(1.05);
+
+    box-shadow:
+        0 9px 0 #3730a3,
+        0 17px 27px
+        rgba(79,70,229,0.28);
+}
+
+
+button:active {
+
+    transform:
+        translateY(4px)
+        scale(0.98);
+
+    box-shadow:
+        0 3px 0 #3730a3,
+        0 7px 12px
+        rgba(79,70,229,0.18);
+}
+
+
+button:disabled {
+
+    cursor: not-allowed;
+
+    filter: grayscale(0.35);
+
+    opacity: 0.55;
+
+    transform: none;
+
+    box-shadow:
+        0 4px 0 #94a3b8;
+}
+
+
+/* =========================================================
+   START BUTTON
+   ========================================================= */
+
+#startBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    box-shadow:
+        0 7px 0 #15803d,
+        0 14px 25px
+        rgba(34,197,94,0.25);
+
+    font-size: 21px;
+
+    animation:
+        startPulse 2s ease-in-out infinite;
+}
+
+
+#startBtn:hover {
+
+    box-shadow:
+        0 9px 0 #15803d,
+        0 18px 30px
+        rgba(34,197,94,0.3);
+}
+
+
+/* =========================================================
+   LEARN BUTTON
+   ========================================================= */
+
+#learnBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f59e0b,
+            #f97316
+        );
+
+    box-shadow:
+        0 7px 0 #c2410c,
+        0 14px 25px
+        rgba(249,115,22,0.2);
+}
+
+
+/* =========================================================
+   QUIZ SCORE
+   ========================================================= */
+
+#skor {
+
+    display: inline-block;
+
+    position: relative;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin: 5px 0 12px;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    color: #92400e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7c2,
+            #ffe8a3
+        );
+
+    border: 2px solid #ffe082;
+
+    box-shadow:
+        0 5px 15px
+        rgba(245,158,11,0.12);
+}
+
+
+/* =========================================================
+   HIGH SCORE
+   ========================================================= */
+
+#highScore {
+
+    display: table;
+
+    margin: 10px auto;
+
+    padding: 8px 17px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    color: #92400e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7cc,
+            #fff0a6
+        );
+
+    border: 2px solid #ffe08a;
+
+    box-shadow:
+        0 5px 15px
+        rgba(245,158,11,0.12);
+}
+
+
+/* =========================================================
+   QUESTION NUMBER
+   ========================================================= */
+
+#nomorSoal {
+
+    display: table;
+
+    margin:
+        8px auto 14px;
+
+    padding: 8px 17px;
+
+    border-radius: 30px;
+
+    color: #4f46e5;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #e0e7ff
+        );
+
+    border: 2px solid #c7d2fe;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 5px 14px
+        rgba(79,70,229,0.1);
+
+    animation:
+        nomorMuncul 0.4s ease;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.progress {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 18px;
+
+    margin:
+        10px 0 22px;
+
+    padding: 3px;
+
+    border-radius: 30px;
+
+    background: #e8eef7;
+
+    box-shadow:
+        inset 0 2px 5px
+        rgba(0,0,0,0.08);
+}
+
+
+#bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #22c55e,
+            #38bdf8,
+            #6366f1,
+            #a855f7
+        );
+
+    background-size: 250% 100%;
+
+    transition:
+        width 0.6s
+        cubic-bezier(.2,.8,.2,1);
+
+    box-shadow:
+        0 0 12px
+        rgba(99,102,241,0.4);
+
+    animation:
+        progressGlow 3s linear infinite;
+}
+
+
+/* =========================================================
+   IMAGE QUIZ
+   ========================================================= */
+
+#gambar {
+
+    width: min(190px, 60vw);
+    height: min(190px, 60vw);
+
+    object-fit: cover;
+
+    display: block;
+
+    margin:
+        10px auto 20px;
+
+    padding: 5px;
+
+    border-radius: 32px;
+
+    background: white;
+
+    border: 3px solid #dbeafe;
+
+    box-shadow:
+        0 14px 30px
+        rgba(30,64,175,0.15);
+
+    animation:
+        gambarMasuk 0.55s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
+#pertanyaan {
+
+    text-align: center;
+
+    font-size:
+        clamp(20px, 5vw, 26px);
+
+    font-weight: 900;
+
+    line-height: 1.45;
+
+    color: #26364d;
+
+    margin:
+        10px 0 18px;
+}
+
+
+/* =========================================================
+   ANSWER BUTTONS
+   ========================================================= */
+
+#pilihan1,
+#pilihan2,
+#pilihan3,
+#pilihan4 {
+
+    text-align: left;
+
+    padding-left: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #4f46e5
+        );
+
+    box-shadow:
+        0 6px 0 #3730a3,
+        0 10px 18px
+        rgba(79,70,229,0.16);
+}
+
+
+#pilihan1::after,
+#pilihan2::after,
+#pilihan3::after,
+#pilihan4::after {
+
+    content: "→";
+
+    position: absolute;
+
+    right: 18px;
+
+    font-size: 20px;
+
+    opacity: 0.55;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+#pilihan1:hover::after,
+#pilihan2:hover::after,
+#pilihan3:hover::after,
+#pilihan4:hover::after {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   CORRECT
+   ========================================================= */
+
+.benar {
+
+    background:
+        linear-gradient(
+            135deg,
+            #34d399,
+            #16a34a
+        ) !important;
+
+    box-shadow:
+        0 6px 0 #15803d,
+        0 12px 25px
+        rgba(34,197,94,0.3)
+        !important;
+
+    animation:
+        benarPop 0.55s ease;
+}
+
+
+/* =========================================================
+   WRONG
+   ========================================================= */
+
+.salah {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fb7185,
+            #dc2626
+        ) !important;
+
+    box-shadow:
+        0 6px 0 #991b1b,
+        0 12px 22px
+        rgba(239,68,68,0.25)
+        !important;
+
+    animation:
+        shakeSalah 0.5s ease;
+}
+
+
+/* =========================================================
+   RESULT TEXT
+   ========================================================= */
+
+#hasil {
+
+    min-height: 30px;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    font-weight: 900;
+
+    margin:
+        15px 0 5px;
+
+    color: #4f46e5;
+
+    animation:
+        hasilPop 0.35s ease;
+}
+
+
+/* =========================================================
+   RESULT BOX
+   ========================================================= */
+
+#hasilBox {
+
+    display: none;
+
+    position: relative;
+
+    margin-top: 20px;
+
+    padding:
+        28px 20px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f3f7ff
+        );
+
+    border:
+        3px solid #dbeafe;
+
+    box-shadow:
+        0 20px 40px
+        rgba(30,64,175,0.13);
+
+    overflow: hidden;
+
+    animation:
+        hasilMuncul 0.65s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+
+#hasilBox::before {
+
+    content: "🎉 ✨ ⭐ ✨ 🎉";
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 8px;
+
+    animation:
+        celebrationFloat 2s
+        ease-in-out infinite;
+}
+
+
+#hasilBox h2 {
+
+    margin:
+        5px 0 10px;
+
+    font-size: 27px;
+
+    color: #4f46e5;
+}
+
+
+#hasilSkor {
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+    color: #16a34a;
+
+    margin:
+        10px 0;
+
+    text-shadow:
+        0 5px 12px
+        rgba(34,197,94,0.18);
+}
+
+
+#hasilPesan {
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   RESULT BUTTON
+   ========================================================= */
+
+#ulangBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f59e0b,
+            #f97316
+        );
+
+    box-shadow:
+        0 7px 0 #c2410c,
+        0 14px 25px
+        rgba(249,115,22,0.2);
+}
+
+
+#homeBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #2563eb
+        );
+
+    box-shadow:
+        0 7px 0 #1d4ed8,
+        0 14px 25px
+        rgba(37,99,235,0.2);
+}
+
+
+/* =========================================================
+   LIFE
+   ========================================================= */
+
+#nyawa {
+
+    position: fixed;
+
+    top: 13px;
+    right: 13px;
+
+    z-index: 1000;
+
+    padding: 8px 12px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border:
+        2px solid white;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.12);
+
+    font-size: 19px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+    backdrop-filter:
+        blur(10px);
+
+    animation:
+        lifeFloat 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   RANK CARD
+   ========================================================= */
+
+.rankCard {
+
+    position: relative;
+
+    width: 90%;
+    max-width: 420px;
+
+    margin: 18px auto;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f7f8ff
+        );
+
+    border:
+        2px solid #e0e7ff;
+
+    box-shadow:
+        0 12px 28px
+        rgba(79,70,229,0.1);
+
+    overflow: hidden;
+}
+
+
+.rankCard::after {
+
+    content: "⭐";
+
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    font-size: 28px;
+
+    animation:
+        starSpin 3s ease-in-out infinite;
+}
+
+
+.rankTitle {
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    color: #94a3b8;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+
+.rankText {
+
+    font-size: 23px;
+
+    font-weight: 900;
+
+    color: #4f46e5;
+
+    margin-bottom: 13px;
+}
+
+
+.xpInfo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    color: #64748b;
+
+    margin-bottom: 8px;
+}
+
+
+.xpProgress {
+
+    width: 100%;
+
+    height: 16px;
+
+    padding: 3px;
+
+    border-radius: 30px;
+
+    background: #e8edf7;
+
+    box-shadow:
+        inset 0 2px 5px
+        rgba(0,0,0,0.08);
+}
+
+
+#xpBar {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #facc15,
+            #fb923c,
+            #f97316
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(249,115,22,0.35);
+
+    transition:
+        width 0.6s ease;
+}
+
+
+/* =========================================================
+   DAILY QUEST
+   ========================================================= */
+
+.dailyBtn {
+
+    width: 90%;
+
+    max-width: 420px;
+
+    margin:
+        14px auto 0;
+
+    display: block;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6b35,
+            #f43f5e,
+            #a855f7
+        );
+
+    background-size: 200% 200%;
+
+    box-shadow:
+        0 7px 0 #9f1239,
+        0 14px 25px
+        rgba(244,63,94,0.25);
+
+    animation:
+        dailyGradient 4s ease infinite;
+}
+
+
+.dailyStatus {
+
+    width: 90%;
+
+    max-width: 420px;
+
+    margin:
+        8px auto 0;
+
+    padding: 8px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    color: #64748b;
+}
+
+
+#dailyStatus strong {
+
+    color: #f97316;
+
+}
+
+
+.dailyBtn:disabled {
+
+    opacity: 0.5;
+
+    background:
+        linear-gradient(
+            135deg,
+            #94a3b8,
+            #64748b
+        );
+
+    box-shadow:
+        0 5px 0 #475569;
+}
+
+
+/* =========================================================
+   LEARN MENU
+   ========================================================= */
+
+.menuCard {
+
+    max-width: 500px;
+}
+
+
+.categoryGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+.categoryBtn {
+
+    min-height: 155px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 15px;
+
+    border-radius: 25px;
+
+    color: #334155;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f1f5ff
+        );
+
+    border:
+        3px solid #e2e8ff;
+
+    box-shadow:
+        0 7px 0 #dbe3f5,
+        0 12px 20px
+        rgba(30,64,175,0.08);
+
+    font-size: 42px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.categoryBtn:hover {
+
+    transform:
+        translateY(-6px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 11px 0 #dbe3f5,
+        0 18px 28px
+        rgba(30,64,175,0.13);
+}
+
+
+.categoryBtn:nth-child(2n):hover {
+
+    transform:
+        translateY(-6px)
+        rotate(1deg);
+}
+
+
+.categoryBtn span {
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    color: #4f46e5;
+}
+
+
+.categoryBtn small {
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    color: #94a3b8;
+}
+
+
+.categoryBtn.locked {
+
+    opacity: 0.55;
+
+    filter: grayscale(0.6);
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.backBtn,
+.quizHomeBtn {
+
+    width: auto;
+
+    min-height: 42px;
+
+    margin:
+        0 auto 18px;
+
+    padding:
+        10px 18px;
+
+    font-size: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #94a3b8,
+            #64748b
+        );
+
+    box-shadow:
+        0 5px 0 #475569,
+        0 8px 15px
+        rgba(71,85,105,0.15);
+}
+
+
+/* =========================================================
+   LEARN MODE
+   ========================================================= */
+
+#learnNumber {
+
+    display: inline-block;
+
+    padding:
+        8px 18px;
+
+    margin-bottom: 5px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    color: #4f46e5;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #e0e7ff
+        );
+
+    border:
+        2px solid #c7d2fe;
+}
+
+
+#learnImage {
+
+    width: 220px;
+    height: 220px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin:
+        18px auto;
+
+    padding: 8px;
+
+    border-radius: 32px;
+
+    background: white;
+
+    border:
+        3px solid #e0e7ff;
+
+    box-shadow:
+        0 15px 30px
+        rgba(30,64,175,0.14);
+
+    animation:
+        gambarMasuk 0.55s ease;
+}
+
+
+#colorBox {
+
+    width: 220px;
+    height: 220px;
+
+    display: none;
+
+    margin:
+        18px auto;
+
+    border-radius: 32px;
+
+    border:
+        7px solid white;
+
+    box-shadow:
+        0 15px 30px
+        rgba(30,64,175,0.16);
+
+    animation:
+        gambarMasuk 0.55s ease;
+}
+
+
+#numberBox {
+
+    width: 220px;
+    height: 220px;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        18px auto;
+
+    border-radius: 32px;
+
+    background: white;
+
+    border:
+        5px solid #ffd43b;
+
+    box-shadow:
+        0 15px 30px
+        rgba(245,158,11,0.15);
+
+    font-size: 100px;
+
+    font-weight: 900;
+
+    color: #f59e0b;
+
+    animation:
+        gambarMasuk 0.55s ease;
+}
+
+
+#learnWord {
+
+    margin:
+        5px 0;
+
+    font-size:
+        clamp(30px, 8vw, 40px);
+
+    font-weight: 900;
+
+    color: #4f46e5;
+
+    text-shadow:
+        0 5px 10px
+        rgba(79,70,229,0.12);
+}
+
+
+#learnMeaning {
+
+    margin:
+        0 0 20px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   LEARN EXAMPLE
+   ========================================================= */
+
+#learnExample {
+
+    max-width: 500px;
+
+    margin:
+        15px auto;
+
+    padding:
+        18px 20px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff
+        );
+
+    border:
+        2px solid #ddd6fe;
+
+    color: #475569;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 20px
+        rgba(99,102,241,0.08);
+}
+
+
+/* =========================================================
+   LEARN NAVIGATION
+   ========================================================= */
+
+.learnNavigation {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.learnNavigation button {
+
+    flex: 1;
+}
+
+
+#prevLearnBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #94a3b8,
+            #64748b
+        );
+
+    box-shadow:
+        0 6px 0 #475569;
+}
+
+
+#nextLearnBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    box-shadow:
+        0 6px 0 #15803d;
+}
+
+
+/* =========================================================
+   SPEAK BUTTON
+   ========================================================= */
+
+#speakBtn {
+
+    width: auto;
+
+    min-width: 150px;
+
+    margin:
+        8px auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #2563eb
+        );
+
+    box-shadow:
+        0 6px 0 #1d4ed8,
+        0 10px 18px
+        rgba(37,99,235,0.18);
+}
+
+
+/* =========================================================
+   XP POPUP
+   ========================================================= */
+
+.plusXP {
+
+    position: fixed;
+
+    z-index: 9999;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    color: #f59e0b;
+
+    text-shadow:
+        0 2px 4px
+        rgba(0,0,0,0.12);
+
+    pointer-events: none;
+
+    animation:
+        naikXP 1s
+        cubic-bezier(.2,.8,.2,1)
+        forwards;
+}
+
+
+/* =========================================================
+   +2 EFFECT
+   ========================================================= */
+
+.plusDua {
+
+    position: fixed;
+
+    z-index: 9999;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    color: #f59e0b;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 3px 7px
+        rgba(245,158,11,0.25);
+
+    animation:
+        bintangNaik 0.9s
+        ease-out
+        forwards;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes cardMasuk {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(35px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes titleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+@keyframes rainbowFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(3deg);
+    }
+}
+
+
+@keyframes startPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+}
+
+
+@keyframes gambarMasuk {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(0.75)
+            rotate(-3deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1)
+            rotate(0);
+    }
+}
+
+
+@keyframes benarPop {
+
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform:
+            scale(1.1)
+            rotate(-1deg);
+    }
+
+    65% {
+        transform:
+            scale(0.98)
+            rotate(1deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes shakeSalah {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    15% {
+        transform: translateX(-10px);
+    }
+
+    30% {
+        transform: translateX(10px);
+    }
+
+    45% {
+        transform: translateX(-8px);
+    }
+
+    60% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-4px);
+    }
+}
+
+
+@keyframes hasilMuncul {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(0.7)
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+@keyframes hasilPop {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes nomorMuncul {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(-10px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes progressGlow {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 250% 50%;
+    }
+}
+
+
+@keyframes awanBergerak {
+
+    from {
+        transform: translateX(-10%);
+    }
+
+    to {
+        transform: translateX(20%);
+    }
+}
+
+
+@keyframes pelangiFloat {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            translateY(-8px);
+    }
+}
+
+
+@keyframes bintangKedip {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8) rotate(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(20deg);
+    }
+}
+
+
+@keyframes celebrationFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+@keyframes lifeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+
+@keyframes starSpin {
+
+    0%,
+    100% {
+        transform: rotate(-8deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(8deg) scale(1.12);
+    }
+}
+
+
+@keyframes dailyGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes naikXP {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(20px)
+            scale(0.7);
+    }
+
+    25% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1.15);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-65px)
+            scale(1);
+    }
+}
+
+
+@keyframes bintangNaik {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(10px)
+            scale(0.5);
+    }
+
+    20% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1.25);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-70px)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding:
+            12px 8px;
+    }
+
+
+    #startScreen,
+    #learnMenu,
+    #learnScreen {
+
+        padding:
+            12px 5px;
+    }
+
+
+    .card,
+    .startCard,
+    .menuCard,
+    .learnCard {
+
+        padding:
+            23px 16px;
+
+        border-radius: 28px;
+    }
+
+
+    .startCard h1 {
+
+        font-size: 34px;
+    }
+
+
+    .rainbowIcon {
+
+        font-size: 65px;
+    }
+
+
+    #gambar,
+    #learnImage,
+    #colorBox,
+    #numberBox {
+
+        width: 180px;
+        height: 180px;
+    }
+
+
+    #pertanyaan {
+
+        font-size: 20px;
+    }
+
+
+    button {
+
+        min-height: 51px;
+
+        padding:
+            14px 15px;
+
+        font-size: 16px;
+
+        border-radius: 18px;
+    }
+
+
+    .categoryGrid {
+
+        gap: 11px;
+    }
+
+
+    .categoryBtn {
+
+        min-height: 130px;
+
+        font-size: 34px;
+
+        border-radius: 21px;
+    }
+
+
+    .categoryBtn span {
+
+        font-size: 15px;
+    }
+
+
+    .categoryBtn small {
+
+        font-size: 10px;
+    }
+
+
+    #learnWord {
+
+        font-size: 32px;
+    }
+
+
+    #learnMeaning {
+
+        font-size: 19px;
+    }
+
+
+    .learnNavigation {
+
+        gap: 8px;
+    }
+
+
+    #nyawa {
+
+        top: 9px;
+        right: 9px;
+
+        font-size: 17px;
+
+        padding:
+            6px 9px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .categoryBtn {
+
+        min-height: 115px;
+
+        font-size: 29px;
+    }
+
+
+    .categoryBtn span {
+
+        font-size: 13px;
+    }
+
+
+    #gambar,
+    #learnImage,
+    #colorBox,
+    #numberBox {
+
+        width: 155px;
+        height: 155px;
+    }
+
+
+    #pertanyaan {
+
+        font-size: 18px;
+    }
+
+
+    button {
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+
+#welcomeScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #eaf7ff, #f7f0ff);
+
+    padding: 20px;
+}
+
+.welcome-box {
+    width: 100%;
+    max-width: 450px;
+
+    background: white;
+    border-radius: 25px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.welcome-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.welcome-box h1 {
+    color: #4263eb;
+    margin-bottom: 20px;
+}
+
+.welcome-box p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.welcome-box strong {
+    color: #4263eb;
+}
+
+#startLearning {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+
+    padding: 16px;
+
+    margin-top: 10px;
+
+    background: #4263eb;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
