@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    
+    <meta name="google" content="notranslate">
+
+    <title>English Kids</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  
+  <div id="welcomeScreen">
+    <div class="welcome-box">
+        <div class="welcome-icon">🌟</div>
+
+        <h1>Welcome to English Kids!</h1>
+
+        <p>
+            Untuk pengalaman belajar yang lebih baik,
+            kami menyarankan agar kamu
+            <strong>tidak menggunakan fitur Translate/Penerjemah</strong>
+            dari browser.
+        </p>
+
+        <p>
+            English Kids dirancang agar kamu belajar
+            memahami bahasa Inggris secara langsung. 🇬🇧📚
+        </p>
+
+<button id="startLearning" onclick="document.getElementById('welcomeScreen').style.display='none'">
+    🚀 START LEARNING
+</button>
+
+    </div>
+</div>
+
+    <!-- =====================
+         NYAWA
+    ====================== -->
+
+    <div id="nyawa">❤️❤️❤️</div>
+
+
+    <!-- =====================
+         HOME
+    ====================== -->
+
+    <div id="startScreen">
+
+        <div class="startCard">
+
+            <div class="rainbowIcon">
+                🌈
+            </div>
+
+            <h1>English Kids</h1>
+
+            <p class="startText">
+                Learn English while having fun! 🎮
+            </p>
+            
+            <div class="rankCard">
+
+    <div class="rankTitle">
+        🏆 YOUR RANK
+    </div>
+
+    <div id="rankText" class="rankText">
+        🌱 Beginner
+    </div>
+
+    <div class="xpInfo">
+        <span>EXP</span>
+        <span id="xpText">0 / 500 XP</span>
+    </div>
+
+    <div class="xpProgress">
+        <div id="xpBar"></div>
+    </div>
+
+</div>
+
+            <div class="gameInfo">
+
+                <p>📚 Learn English</p>
+
+                <p>🎮 Fun Quiz</p>
+
+                <p>🏆 Track Your Progress</p>
+
+            </div>
+
+
+            <button id="learnBtn">
+                📚 LEARN ENGLISH
+            </button>
+
+
+            <button id="startBtn">
+                🎮 PLAY QUIZ
+            </button>
+            
+            <button id="dailyBtn">
+    🔥 DAILY QUIZ
+</button>
+
+<div id="dailyStatus"></div>
+<div id="dailyCountdown"></div>
+
+            <p class="homeHighScore">
+                🏆 High Score:
+                <span id="homeHighScore">0</span>
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         MENU BELAJAR
+    ====================== -->
+
+    <div id="learnMenu" style="display:none;">
+
+        <div class="menuCard">
+
+            <button class="backBtn" id="learnBackBtn">
+                ← Back
+            </button>
+
+
+            <h1>📚 Learn English</h1>
+
+            <p class="menuText">
+                Choose a topic to learn!
+            </p>
+
+
+            <div class="categoryGrid">
+
+                <button
+                    class="categoryBtn"
+                    data-category="animals"
+                >
+                    🐶
+                    <span>Animals</span>
+                    <small>Learn Animal Names</small>
+                </button>
+
+
+                <button
+    class="categoryBtn"
+    data-category="colors"
+>
+    🎨
+    <span>Colors</span>
+    <small>Learn Colors</small>
+</button>
+
+
+                <button
+    class="categoryBtn"
+    data-category="numbers"
+>
+    🔢
+    <span>Numbers</span>
+    <small>Learn Numbers 1-50</small>
+</button>
+
+
+<button
+    class="categoryBtn"
+    data-category="food"
+>
+    🍎
+    <span>Food</span>
+    <small>Learn Food Names</small>
+</button>
+
+
+                <button
+                    class="categoryBtn"
+                    data-category="grammar"
+                >
+                    📖
+                    <span>Grammar</span>
+                    <small>50 Basic Lessons </small>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         LEARN SCREEN
+    ====================== -->
+
+    <div id="learnScreen" style="display:none;">
+
+        <div class="learnCard">
+
+            <button
+                class="backBtn"
+                id="learnHomeBtn"
+            >
+                🏠 Home
+            </button>
+
+
+            <p id="learnNumber">
+                1 / 20
+            </p>
+
+
+            <img
+                id="learnImage"
+                src=""
+                alt="Animal"
+            >
+            
+<div id="colorBox"></div>
+
+<div id="numberBox"></div>
+
+            <div class="wordRow">
+    <h2 id="learnWord">Cat</h2>
+
+    <button id="speakBtn" class="speakBtn">
+        🔊
+    </button>
+</div>
+
+
+            <p id="learnMeaning">
+                Kucing
+            </p>
+
+
+            <div class="learnNavigation">
+
+                <button id="prevLearnBtn">
+                    ← Previous
+                </button>
+
+                <button id="nextLearnBtn">
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================
+         QUIZ
+    ====================== -->
+
+    <div id="quizScreen" style="display:none;">
+
+        <div class="card">
+
+            <button
+                class="quizHomeBtn"
+                id="quizHomeBtn"
+            >
+                🏠 Home
+            </button>
+
+
+            <h2>
+                Choose The Correct Answer
+            </h2>
+
+
+            <p id="skor">
+                Score : 0
+            </p>
+
+
+            <p id="highScore">
+                🏆 High Score: 0
+            </p>
+
+
+            <p id="nomorSoal">
+                Question 1 / 50
+            </p>
+
+
+            <div class="progress">
+                <div id="bar"></div>
+            </div>
+
+
+            <img
+                id="gambar"
+                src=""
+                width="250"
+                alt="Question Image"
+            >
+
+
+            <p id="pertanyaan"></p>
+
+
+            <button id="pilihan1"></button>
+
+            <button id="pilihan2"></button>
+
+            <button id="pilihan3"></button>
+
+            <button id="pilihan4"></button>
+
+
+            <p id="hasil"></p>
+
+
+
+            <!-- HASIL -->
+
+            <div
+                id="hasilBox"
+                style="display:none;"
+            >
+
+                <h2>
+                    🎉 Quiz Complete!
+                </h2>
+
+
+                <p id="hasilSkor"></p>
+
+
+                <p id="hasilPesan"></p>
+
+
+                <button id="ulangBtn">
+                    🔄 Play Again
+                </button>
+
+
+                <button id="homeBtn">
+                    🏠 Back to Home
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js">
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
