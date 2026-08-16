@@ -13,5 +13,3 @@ The generated file is a debug APK for testing.
 
 ## Important
 The original English Kids ZIP references `giraffe.png`, `penguin.png`, `tiger.png`, and `zebra.png`, but those four files are not present in the supplied ZIP. The APK project keeps the original website files unchanged, so those missing images may still appear as broken images in screens that use them.
-
-Build APK setup updated.
