@@ -13,6 +13,28 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Show repository structure
+        run: |
+          echo "=== CURRENT DIRECTORY ==="
+          pwd
+
+          echo "=== GIT COMMIT ==="
+          git rev-parse HEAD
+
+          echo "=== ROOT ==="
+          ls -la
+
+          echo "=== APP ==="
+          ls -la app
+
+          echo "=== APP/SRC ==="
+          ls -la app/src
+
+          echo "=== APP/SRC/MAIN ==="
+          ls -la app/src/main
 
       - name: Setup Java 17
         uses: actions/setup-java@v4
@@ -24,18 +46,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
-
-      - name: Check Android project files
-        run: |
-          echo "=== APP ==="
-          ls -la app
-          echo "=== APP/SRC ==="
-          ls -la app/src
-          echo "=== APP/SRC/MAIN ==="
-          ls -la app/src/main
-          echo "=== MANIFEST ==="
-          test -f app/src/main/AndroidManifest.xml
-          echo "AndroidManifest.xml FOUND!"
 
       - name: Build APK
         run: ./gradlew assembleDebug
