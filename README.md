@@ -1,4 +1,4 @@
-# English Kids V1 — Android APK Project
+# English Kids V1 — Android APK Project. 
 
 This project wraps the existing English Kids HTML/CSS/JS website inside an Android WebView.
 
